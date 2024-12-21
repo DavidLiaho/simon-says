@@ -1,0 +1,113 @@
+.Game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #111827;
+}
+
+.game-board {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+
+.game-circle {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.game-button {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.game-button:hover {
+    filter: brightness(1.3);
+    transform: scale(1.03);
+}
+
+.game-button.active {
+    filter: brightness(1.5);
+    transform: scale(1.03);
+}
+
+.green-button {
+    top: 0;
+    left: 0;
+    background-color: #059669;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    border-top-left-radius: 100%;
+}
+
+.red-button {
+    top: 0;
+    right: 0;
+    background-color: #dc2626;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    border-top-right-radius: 100%;
+}
+
+.yellow-button {
+    bottom: 0;
+    left: 0;
+    background-color: #fbbf24;
+    border-right: 4px solid black;
+    border-top: 4px solid black;
+    border-bottom-left-radius: 100%;
+}
+
+.blue-button {
+    bottom: 0;
+    right: 0;
+    background-color: #2563eb;
+    border-left: 4px solid black;
+    border-top: 4px solid black;
+    border-bottom-right-radius: 100%;
+}
+
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 96px;
+    height: 96px;
+    background-color: #1f2937;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.center-circle:hover {
+    width: 105px;
+    height: 105px;
+}
+
+.center-text {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.onGoing:hover {
+    width: 96px;
+    height: 96px;
+    cursor: default;
+}
+
+.score {
+    font-size: xx-large;
+    transform: translate(0, -100px);
+}
